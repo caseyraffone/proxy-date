@@ -237,6 +237,27 @@ function App() {
         </div>
       </section>}
 
+      <section className="waitlist panel" id="waitlist">
+        <div>
+          <div className="eyebrow">Private beta</div>
+          <h2>Want your AI proxy to screen real matches?</h2>
+          <p>Join the waitlist. Early beta will be concierge-style: paste your dating-safe AI summary, get matched manually, and approve before any intro.</p>
+        </div>
+        <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="waitlist" />
+          <p className="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <input name="email" type="email" placeholder="Email" required />
+          <input name="city" placeholder="City" />
+          <select name="intent" defaultValue="">
+            <option value="" disabled>Dating intent</option>
+            <option>Something serious</option>
+            <option>Open / exploratory</option>
+            <option>Just curious about the idea</option>
+          </select>
+          <button className="run" type="submit">Join private beta</button>
+        </form>
+      </section>
+
       <section className="principles" id="privacy">
         <div><h2>The wedge</h2><p>The first product is not “AI dates for you.” It is “your second brain creates a better dating profile and filters low-signal matches.”</p></div>
         <div className="principle-card"><b>Copy/paste MVP</b><span>No account integration needed. Users bring a dating-safe summary from ChatGPT or Claude.</span></div>
