@@ -29,7 +29,7 @@ h1 { font-size: clamp(44px, 7vw, 82px); line-height: .9; letter-spacing: -0.08em
 .hero-card p { color: #475569; line-height: 1.55; }
 .mini-chat { display: grid; gap: 10px; margin-top: 22px; }
 .mini-chat p { margin: 0; background: #f8fafc; border: 1px solid #e2e8f0; padding: 14px; border-radius: 18px; }
-.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+.grid, .paste-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
 .panel { padding: 22px; }
 .panel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; gap: 12px; }
 .panel-head span { font-size: 22px; font-weight: 950; letter-spacing: -0.04em; }
@@ -41,6 +41,13 @@ h1 { font-size: clamp(44px, 7vw, 82px); line-height: .9; letter-spacing: -0.08em
 input, textarea { width: 100%; border: 1px solid #dbe3ef; background: #fbfdff; border-radius: 16px; padding: 12px 13px; color: #0f172a; outline: none; }
 textarea { min-height: 92px; resize: vertical; line-height: 1.45; }
 input:focus, textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 4px #dbeafe; }
+.prompt-panel { margin-top: 22px; }
+.prompt-panel pre { white-space: pre-wrap; background: #0f172a; color: #e2e8f0; border-radius: 22px; padding: 18px; line-height: 1.5; overflow-x: auto; }
+.big-paste { min-height: 360px; margin-bottom: 16px; }
+.explainer h2 { font-size: 38px; letter-spacing: -0.06em; margin: 0 0 12px; }
+.explainer p { color: #475569; line-height: 1.6; }
+.proxy-card textarea { min-height: 112px; }
+.explainer ul { text-align: left; }
 .run-panel { display: flex; justify-content: center; align-items: center; gap: 18px; padding: 22px; margin: 22px 0; }
 .run { font-size: 16px; padding: 15px 24px; }
 .run-panel p { color: #64748b; margin: 0; font-weight: 700; }
@@ -71,7 +78,7 @@ ul { padding-left: 20px; color: #475569; line-height: 1.55; }
 .principle-card span { color: #64748b; line-height: 1.45; }
 @media (max-width: 900px) {
   main { padding: 18px; }
-  .hero, .grid, .results, .principles { grid-template-columns: 1fr; }
+  .hero, .grid, .paste-grid, .results, .principles { grid-template-columns: 1fr; }
   .run-panel { align-items: stretch; flex-direction: column; }
   .two, .approve-row { grid-template-columns: 1fr; }
 }
